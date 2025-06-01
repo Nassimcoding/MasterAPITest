@@ -1,0 +1,58 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\MasterAPI\\MasterAPITest\\program\\MasterAPITest\\MasterAPITest\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{445D67EE-E487-492A-84DA-47BE25A5332B}|MasterAPITest\\MasterAPITest.csproj|d:\\masterapi\\masterapitest\\program\\masterapitest\\masterapitest\\masterapitest\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{445D67EE-E487-492A-84DA-47BE25A5332B}|MasterAPITest\\MasterAPITest.csproj|solutionrelative:masterapitest\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CCC30BB4-D020-4395-B2A5-FB6B90135261}|MasterAPIUnitTest\\MasterAPIUnitTest.csproj|d:\\masterapi\\masterapitest\\program\\masterapitest\\masterapitest\\masterapiunittest\\unittest1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CCC30BB4-D020-4395-B2A5-FB6B90135261}|MasterAPIUnitTest\\MasterAPIUnitTest.csproj|solutionrelative:masterapiunittest\\unittest1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 2,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{d78612c7-9962-4b83-95d9-268046dad23a}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "UnitTest1.cs",
+              "DocumentMoniker": "D:\\MasterAPI\\MasterAPITest\\program\\MasterAPITest\\MasterAPITest\\MasterAPIUnitTest\\UnitTest1.cs",
+              "RelativeDocumentMoniker": "MasterAPIUnitTest\\UnitTest1.cs",
+              "ToolTip": "D:\\MasterAPI\\MasterAPITest\\program\\MasterAPITest\\MasterAPITest\\MasterAPIUnitTest\\UnitTest1.cs",
+              "RelativeToolTip": "MasterAPIUnitTest\\UnitTest1.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAWAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-01T08:45:04.351Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "HomeController.cs",
+              "DocumentMoniker": "D:\\MasterAPI\\MasterAPITest\\program\\MasterAPITest\\MasterAPITest\\MasterAPITest\\Controllers\\HomeController.cs",
+              "RelativeDocumentMoniker": "MasterAPITest\\Controllers\\HomeController.cs",
+              "ToolTip": "D:\\MasterAPI\\MasterAPITest\\program\\MasterAPITest\\MasterAPITest\\MasterAPITest\\Controllers\\HomeController.cs",
+              "RelativeToolTip": "MasterAPITest\\Controllers\\HomeController.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAQwA4AAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-01T08:43:34.103Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
