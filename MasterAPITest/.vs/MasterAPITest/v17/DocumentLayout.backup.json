@@ -3,12 +3,32 @@
   "WorkspaceRootPath": "D:\\MasterAPI\\MasterAPITest\\program\\MasterAPITest\\MasterAPITest\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{445D67EE-E487-492A-84DA-47BE25A5332B}|MasterAPITest\\MasterAPITest.csproj|d:\\masterapi\\masterapitest\\program\\masterapitest\\masterapitest\\masterapitest\\models\\product.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{445D67EE-E487-492A-84DA-47BE25A5332B}|MasterAPITest\\MasterAPITest.csproj|solutionrelative:masterapitest\\models\\product.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{445D67EE-E487-492A-84DA-47BE25A5332B}|MasterAPITest\\MasterAPITest.csproj|d:\\masterapi\\masterapitest\\program\\masterapitest\\masterapitest\\masterapitest\\imodels\\iproduct.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{445D67EE-E487-492A-84DA-47BE25A5332B}|MasterAPITest\\MasterAPITest.csproj|solutionrelative:masterapitest\\imodels\\iproduct.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CCC30BB4-D020-4395-B2A5-FB6B90135261}|MasterAPIUnitTest\\MasterAPIUnitTest.csproj|d:\\masterapi\\masterapitest\\program\\masterapitest\\masterapitest\\masterapiunittest\\datagenerator\\managerdatagenerator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CCC30BB4-D020-4395-B2A5-FB6B90135261}|MasterAPIUnitTest\\MasterAPIUnitTest.csproj|solutionrelative:masterapiunittest\\datagenerator\\managerdatagenerator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{445D67EE-E487-492A-84DA-47BE25A5332B}|MasterAPITest\\MasterAPITest.csproj|d:\\masterapi\\masterapitest\\program\\masterapitest\\masterapitest\\masterapitest\\masterapitest.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{445D67EE-E487-492A-84DA-47BE25A5332B}|MasterAPITest\\MasterAPITest.csproj|solutionrelative:masterapitest\\masterapitest.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{445D67EE-E487-492A-84DA-47BE25A5332B}|MasterAPITest\\MasterAPITest.csproj|d:\\masterapi\\masterapitest\\program\\masterapitest\\masterapitest\\masterapitest\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{445D67EE-E487-492A-84DA-47BE25A5332B}|MasterAPITest\\MasterAPITest.csproj|solutionrelative:masterapitest\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{CCC30BB4-D020-4395-B2A5-FB6B90135261}|MasterAPIUnitTest\\MasterAPIUnitTest.csproj|d:\\masterapi\\masterapitest\\program\\masterapitest\\masterapitest\\masterapiunittest\\unittest1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{CCC30BB4-D020-4395-B2A5-FB6B90135261}|MasterAPIUnitTest\\MasterAPIUnitTest.csproj|solutionrelative:masterapiunittest\\unittest1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CCC30BB4-D020-4395-B2A5-FB6B90135261}|MasterAPIUnitTest\\MasterAPIUnitTest.csproj|d:\\masterapi\\masterapitest\\program\\masterapitest\\masterapitest\\masterapiunittest\\datagenerator\\productdatagenerator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CCC30BB4-D020-4395-B2A5-FB6B90135261}|MasterAPIUnitTest\\MasterAPIUnitTest.csproj|solutionrelative:masterapiunittest\\datagenerator\\productdatagenerator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -18,15 +38,80 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 1,
           "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "IProduct.cs",
+              "DocumentMoniker": "D:\\MasterAPI\\MasterAPITest\\program\\MasterAPITest\\MasterAPITest\\MasterAPITest\\IModels\\IProduct.cs",
+              "RelativeDocumentMoniker": "MasterAPITest\\IModels\\IProduct.cs",
+              "ToolTip": "D:\\MasterAPI\\MasterAPITest\\program\\MasterAPITest\\MasterAPITest\\MasterAPITest\\IModels\\IProduct.cs",
+              "RelativeToolTip": "MasterAPITest\\IModels\\IProduct.cs",
+              "ViewState": "AgIAACMAAAAAAAAAAAA6wDIAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-01T09:19:10.018Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Product.cs",
+              "DocumentMoniker": "D:\\MasterAPI\\MasterAPITest\\program\\MasterAPITest\\MasterAPITest\\MasterAPITest\\Models\\Product.cs",
+              "RelativeDocumentMoniker": "MasterAPITest\\Models\\Product.cs",
+              "ToolTip": "D:\\MasterAPI\\MasterAPITest\\program\\MasterAPITest\\MasterAPITest\\MasterAPITest\\Models\\Product.cs",
+              "RelativeToolTip": "MasterAPITest\\Models\\Product.cs",
+              "ViewState": "AgIAAAEAAAAgz8zMzMwnwAwAAAAyAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-01T09:10:59.341Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "MasterAPITest",
+              "DocumentMoniker": "D:\\MasterAPI\\MasterAPITest\\program\\MasterAPITest\\MasterAPITest\\MasterAPITest\\MasterAPITest.csproj",
+              "RelativeDocumentMoniker": "MasterAPITest\\MasterAPITest.csproj",
+              "ToolTip": "D:\\MasterAPI\\MasterAPITest\\program\\MasterAPITest\\MasterAPITest\\MasterAPITest\\MasterAPITest.csproj",
+              "RelativeToolTip": "MasterAPITest\\MasterAPITest.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAASAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2025-06-01T09:10:06.774Z",
+              "EditorCaption": ""
+            },
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{d78612c7-9962-4b83-95d9-268046dad23a}"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
+              "Title": "ManagerDataGenerator.cs",
+              "DocumentMoniker": "D:\\MasterAPI\\MasterAPITest\\program\\MasterAPITest\\MasterAPITest\\MasterAPIUnitTest\\DataGenerator\\ManagerDataGenerator.cs",
+              "RelativeDocumentMoniker": "MasterAPIUnitTest\\DataGenerator\\ManagerDataGenerator.cs",
+              "ToolTip": "D:\\MasterAPI\\MasterAPITest\\program\\MasterAPITest\\MasterAPITest\\MasterAPIUnitTest\\DataGenerator\\ManagerDataGenerator.cs",
+              "RelativeToolTip": "MasterAPIUnitTest\\DataGenerator\\ManagerDataGenerator.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-01T09:08:36.834Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "ProductDataGenerator.cs",
+              "DocumentMoniker": "D:\\MasterAPI\\MasterAPITest\\program\\MasterAPITest\\MasterAPITest\\MasterAPIUnitTest\\DataGenerator\\ProductDataGenerator.cs",
+              "RelativeDocumentMoniker": "MasterAPIUnitTest\\DataGenerator\\ProductDataGenerator.cs",
+              "ToolTip": "D:\\MasterAPI\\MasterAPITest\\program\\MasterAPITest\\MasterAPITest\\MasterAPIUnitTest\\DataGenerator\\ProductDataGenerator.cs",
+              "RelativeToolTip": "MasterAPIUnitTest\\DataGenerator\\ProductDataGenerator.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-01T09:08:14.159Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
               "Title": "UnitTest1.cs",
               "DocumentMoniker": "D:\\MasterAPI\\MasterAPITest\\program\\MasterAPITest\\MasterAPITest\\MasterAPIUnitTest\\UnitTest1.cs",
               "RelativeDocumentMoniker": "MasterAPIUnitTest\\UnitTest1.cs",
@@ -39,13 +124,13 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 4,
               "Title": "HomeController.cs",
               "DocumentMoniker": "D:\\MasterAPI\\MasterAPITest\\program\\MasterAPITest\\MasterAPITest\\MasterAPITest\\Controllers\\HomeController.cs",
               "RelativeDocumentMoniker": "MasterAPITest\\Controllers\\HomeController.cs",
               "ToolTip": "D:\\MasterAPI\\MasterAPITest\\program\\MasterAPITest\\MasterAPITest\\MasterAPITest\\Controllers\\HomeController.cs",
               "RelativeToolTip": "MasterAPITest\\Controllers\\HomeController.cs",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAQwA4AAAAJAAAAAAAAAA==",
+              "ViewState": "AgIAAAUAAABgMzMzM3M/wAoAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-06-01T08:43:34.103Z",
               "EditorCaption": ""
