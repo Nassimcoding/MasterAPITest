@@ -34,3 +34,5 @@ D:\MasterAPI\MasterAPITest\program\MasterAPITest\MasterAPITest\MasterAPITest\obj
 D:\MasterAPI\MasterAPITest\program\MasterAPITest\MasterAPITest\MasterAPITest\obj\Debug\net8.0\MasterAPITest.pdb
 D:\MasterAPI\MasterAPITest\program\MasterAPITest\MasterAPITest\MasterAPITest\obj\Debug\net8.0\MasterAPITest.genruntimeconfig.cache
 D:\MasterAPI\MasterAPITest\program\MasterAPITest\MasterAPITest\MasterAPITest\obj\Debug\net8.0\ref\MasterAPITest.dll
+D:\MasterAPI\MasterAPITest\program\MasterAPITest\MasterAPITest\MasterAPITest\obj\Debug\net8.0\MasterAPITest.sourcelink.json
+D:\MasterAPI\MasterAPITest\program\MasterAPITest\MasterAPITest\MasterAPITest\bin\Debug\net8.0\Dapper.dll

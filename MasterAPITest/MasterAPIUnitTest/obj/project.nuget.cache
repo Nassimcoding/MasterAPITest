@@ -1,10 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "ew1MBkYJmXk=",
+  "dgSpecHash": "w6XHphJnJKs=",
   "success": true,
   "projectFilePath": "D:\\MasterAPI\\MasterAPITest\\program\\MasterAPITest\\MasterAPITest\\MasterAPIUnitTest\\MasterAPIUnitTest.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\nassi\\.nuget\\packages\\coverlet.collector\\6.0.0\\coverlet.collector.6.0.0.nupkg.sha512",
+    "C:\\Users\\nassi\\.nuget\\packages\\dapper\\2.1.66\\dapper.2.1.66.nupkg.sha512",
     "C:\\Users\\nassi\\.nuget\\packages\\microsoft.codecoverage\\17.8.0\\microsoft.codecoverage.17.8.0.nupkg.sha512",
     "C:\\Users\\nassi\\.nuget\\packages\\microsoft.extensions.apidescription.server\\6.0.5\\microsoft.extensions.apidescription.server.6.0.5.nupkg.sha512",
     "C:\\Users\\nassi\\.nuget\\packages\\microsoft.net.test.sdk\\17.8.0\\microsoft.net.test.sdk.17.8.0.nupkg.sha512",
