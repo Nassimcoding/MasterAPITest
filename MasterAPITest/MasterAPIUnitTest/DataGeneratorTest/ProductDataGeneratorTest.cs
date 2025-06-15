@@ -44,18 +44,18 @@ namespace MasterAPIUnitTest.DataGeneratorTest
             Assert.NotEqual(testPud1.ProductID, testPud1.ProductCategoryID);
         }
 
-        //[Fact]
-        //public void CreateProductOver10000()
-        //{
-        //    var productGenerator = new ProductDataGenerator();
-        //    List<Product> ListOfProduct = new List<Product>();
-        //    for (int i = 0; i < 11000; i++)
-        //    {
-        //        ListOfProduct.Add(productGenerator.ProductDataGenerate());
-        //    }
+        [Fact]
+        public void CreateProductOver10000()
+        {
+            var productGenerator = new ProductDataGenerator();
+            List<Product> ListOfProduct = new List<Product>();
+            for (int i = 0; i < 11000; i++)
+            {
+                ListOfProduct.Add(productGenerator.ProductDataGenerate());
+            }
 
-        //    //Assert
-        //    Assert.True(ListOfProduct.Count > 10000);
-        //}
+            //Assert
+            Assert.True(ListOfProduct.Count > 10000);
+        }
     }
 }

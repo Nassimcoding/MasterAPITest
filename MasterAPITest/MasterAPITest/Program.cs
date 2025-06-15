@@ -1,4 +1,14 @@
+﻿using System.Data;
+using Microsoft.Data.SqlClient;
+
+
 var builder = WebApplication.CreateBuilder(args);
+
+// 1. 讀 connection string
+var connString = builder.Configuration.GetConnectionString("DefaultConnection");
+
+// 2. 把 IDbConnection 本身注入（Transient：每次 request／每次注入都 new 一個新連線）
+builder.Services.AddTransient<IDbConnection>(sp => new Microsoft.Data.SqlClient.SqlConnection(connString));
 
 // Add services to the container.
 

@@ -1,0 +1,15 @@
+D:\MasterAPI\MasterAPITest\program\MasterAPITest\MasterAPITest\SubDataGenerator\bin\Debug\net8.0\SubDataGenerator.exe
+D:\MasterAPI\MasterAPITest\program\MasterAPITest\MasterAPITest\SubDataGenerator\bin\Debug\net8.0\SubDataGenerator.deps.json
+D:\MasterAPI\MasterAPITest\program\MasterAPITest\MasterAPITest\SubDataGenerator\bin\Debug\net8.0\SubDataGenerator.runtimeconfig.json
+D:\MasterAPI\MasterAPITest\program\MasterAPITest\MasterAPITest\SubDataGenerator\bin\Debug\net8.0\SubDataGenerator.dll
+D:\MasterAPI\MasterAPITest\program\MasterAPITest\MasterAPITest\SubDataGenerator\bin\Debug\net8.0\SubDataGenerator.pdb
+D:\MasterAPI\MasterAPITest\program\MasterAPITest\MasterAPITest\SubDataGenerator\obj\Debug\net8.0\SubDataGenerator.GeneratedMSBuildEditorConfig.editorconfig
+D:\MasterAPI\MasterAPITest\program\MasterAPITest\MasterAPITest\SubDataGenerator\obj\Debug\net8.0\SubDataGenerator.AssemblyInfoInputs.cache
+D:\MasterAPI\MasterAPITest\program\MasterAPITest\MasterAPITest\SubDataGenerator\obj\Debug\net8.0\SubDataGenerator.AssemblyInfo.cs
+D:\MasterAPI\MasterAPITest\program\MasterAPITest\MasterAPITest\SubDataGenerator\obj\Debug\net8.0\SubDataGenerator.csproj.CoreCompileInputs.cache
+D:\MasterAPI\MasterAPITest\program\MasterAPITest\MasterAPITest\SubDataGenerator\obj\Debug\net8.0\SubDataGenerator.sourcelink.json
+D:\MasterAPI\MasterAPITest\program\MasterAPITest\MasterAPITest\SubDataGenerator\obj\Debug\net8.0\SubDataGenerator.dll
+D:\MasterAPI\MasterAPITest\program\MasterAPITest\MasterAPITest\SubDataGenerator\obj\Debug\net8.0\refint\SubDataGenerator.dll
+D:\MasterAPI\MasterAPITest\program\MasterAPITest\MasterAPITest\SubDataGenerator\obj\Debug\net8.0\SubDataGenerator.pdb
+D:\MasterAPI\MasterAPITest\program\MasterAPITest\MasterAPITest\SubDataGenerator\obj\Debug\net8.0\SubDataGenerator.genruntimeconfig.cache
+D:\MasterAPI\MasterAPITest\program\MasterAPITest\MasterAPITest\SubDataGenerator\obj\Debug\net8.0\ref\SubDataGenerator.dll
