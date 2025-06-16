@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using MasterAPITest.DataGenerator;
 using MasterAPITest.Models;
+using MasterAPITest.Repository;
 
 namespace MasterAPIUnitTest.DataGeneratorTest
 {
@@ -57,5 +58,19 @@ namespace MasterAPIUnitTest.DataGeneratorTest
             //Assert
             Assert.True(ListOfProduct.Count > 10000);
         }
+
+        [Fact]
+        public void SingleProductInsertToDatabaseTest()
+        {
+            var productGenerator = new ProductDataGenerator();
+            var pDAL = new ProductDAL();
+            Product product = productGenerator.ProductDataGenerate();
+            
+
+            //Assert
+            Assert.True(ListOfProduct.Count > 10000);
+        }
+
+
     }
 }
