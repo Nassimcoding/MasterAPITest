@@ -1,4 +1,5 @@
 ﻿using Dapper;
+using MasterAPITest.DModel;
 using MasterAPITest.IModels;
 using MasterAPITest.IRepository;
 using MasterAPITest.Models;
@@ -7,7 +8,7 @@ using System.Data;
 
 namespace MasterAPITest.Repository
 {
-    public class ProductDAL : IDAL<Product>
+    public class ProductDAL : IDAL<Product,DProduct>
     {
         private readonly IDbConnection con;
         public ProductDAL(IDbConnection Con)
@@ -28,7 +29,7 @@ INSERT INTO Product
     CreateTime,
     UpdateTime,
     IsActive,
-    IsDeleted,
+    IsDelete,
     IsMedia,
     IsTax,
     Comment,
@@ -59,7 +60,7 @@ VALUES
     @CreateTime,
     @UpdateTime,
     @IsActive,
-    @IsDeleted,
+    @IsDelete,
     @IsMedia,
     @IsTax,
     @Comment,
@@ -79,25 +80,41 @@ VALUES
     @BlockList,
     @Status
 );";
-            int checkNums = await con.ExecuteAsync(sql, products);
-            return checkNums == products.Count;
+            int ch = 0;
+            try
+            {
+                for (int i = 0; i < products.Count; i++)
+                {
+                    ch += await con.ExecuteAsync(sql, products[i]);
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("SQL Insert Error:");
+                Console.WriteLine(ex.GetType().FullName);
+                Console.WriteLine(ex.Message);
+                Console.WriteLine(ex.StackTrace);
+                throw;
+            }
+            return ch == products.Count;
+
         }
 
-        public async Task<List<Product>> GetALL()
+        public async Task<List<DProduct>> GetALL()
         {
             string sql = @"
 SELECT * FROM Product";
-            IEnumerable<Product> products = await con.QueryAsync<Product>(sql);
-            return products.AsList();
+            IEnumerable<DProduct> products = await con.QueryAsync<DProduct>(sql);
+            return products.ToList();
         }
 
-        public async Task<Product> GetByID(long productID)
+        public async Task<DProduct> GetByID(long productID)
         {
             string sql = @"
 SELECT * 
 FROM Product
-WHERE ID = @id";
-            var product = await con.QueryFirstOrDefaultAsync<Product>(sql, new { id = productID });
+WHERE ProductID = @id";
+            var product = await con.QueryFirstOrDefaultAsync<DProduct>(sql, new { id = productID });
             if (product != null)
             {
                 return product;
@@ -107,17 +124,17 @@ WHERE ID = @id";
                 throw new InvalidOperationException("Product not found.");
             }
         }
-        public async Task<List<Product>> GetBySearchKeyword(string searchKeyword)
+        public async Task<List<DProduct>> GetBySearchKeyword(string searchKeyword)
         {
             string sql = @"
 SELECT * 
 FROM Product 
 WHERE 
-ProductName LIKE @skw1 ,
-Descroption LIKE @skw2 ,
-Comment LIKE @skw3
+ProductName LIKE @skw1 
+OR Descroption LIKE @skw2
+OR Comment LIKE @skw3
 ";
-            IEnumerable<Product> products = await con.QueryAsync<Product>(sql,
+            IEnumerable<DProduct> products = await con.QueryAsync<DProduct>(sql,
                 new
                 {
                     skw1 = "%" + searchKeyword + "%",
@@ -140,7 +157,7 @@ SET
     Price = @Price,
     UpdateTime = @UpdateTime,      
     IsActive = @IsActive,
-    IsDeleted = @IsDeleted,
+    IsDelete = @IsDelete,
     IsMedia = @IsMedia,
     IsTax = @IsTax,
     Comment = @Comment,
@@ -170,7 +187,7 @@ WHERE ProductID = @ProductID;";
             string sql = @"
 UPDATE Product
 SET
-IsDeleted = @IsDeleted,
+IsDelete = @IsDelete,
 IsActive = @IsActive, // Often also set to false when soft deleted
 UpdateTime = @UpdateTime,
 Modifier = @Modifier

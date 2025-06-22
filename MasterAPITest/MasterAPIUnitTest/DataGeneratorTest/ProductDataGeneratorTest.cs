@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -11,6 +12,22 @@ namespace MasterAPIUnitTest.DataGeneratorTest
 {
     public class ProductDataGeneratorTest
     {
+        private readonly ImplementTest _storePageDAL;
+        public ProductDataGeneratorTest(ImplementTest storePageDAL)
+        {
+            _storePageDAL = storePageDAL;
+        }
+
+
+        //private readonly IDbConnection con;
+        //private readonly ProductDAL _storePageDAL;
+        //public ProductDataGeneratorTest(IDbConnection Con, ProductDAL storePageDAL)
+        //{
+        //    con = Con;
+        //    _storePageDAL = storePageDAL;
+        //}
+
+
         [Fact]
         public void CreateTwoProductAndIDAreDifference()
         {
@@ -59,17 +76,38 @@ namespace MasterAPIUnitTest.DataGeneratorTest
             Assert.True(ListOfProduct.Count > 10000);
         }
 
-        [Fact]
-        public void SingleProductInsertToDatabaseTest()
-        {
-            var productGenerator = new ProductDataGenerator();
-            var pDAL = new ProductDAL();
-            Product product = productGenerator.ProductDataGenerate();
-            
 
-            //Assert
-            Assert.True(ListOfProduct.Count > 10000);
-        }
+        //[Fact]
+        //public async Task databasetest() {
+        //}
+
+        //[Fact]
+        //public async Task SingleProductInsertToDatabaseTest()
+        //{
+        //    var productGenerator = new ProductDataGenerator();
+        //    List<Product> listofproduct = new List<Product>();
+        //    List<Product> datalistofproduct = new List<Product>();
+        //    Product product = productGenerator.ProductDataGenerate();
+        //    for (int i = 0; i < 1100; i++)
+        //    {
+        //        listofproduct.Add(productGenerator.ProductDataGenerate());
+        //    }
+        //    bool checkinsert = await _storePageDAL.Insert(listofproduct);
+
+        //    listofproduct.OrderBy(sid => sid.ProductID);
+        //    for (int i = 0; i < 1100; i++)
+        //    {
+        //        datalistofproduct.Add(await _storePageDAL.GetByID(listofproduct[i].ProductID));
+        //    }
+
+        //    //assert
+        //    Assert.True(listofproduct.Count == datalistofproduct.Count);
+        //    for (int i = 0; i < listofproduct.Count; i++)
+        //    {
+        //        Assert.True(listofproduct[i].ProductID == datalistofproduct[i].ProductID);
+
+        //    }
+        //}
 
 
     }

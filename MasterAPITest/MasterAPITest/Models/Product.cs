@@ -5,34 +5,34 @@ namespace MasterAPITest.Models
     public class Product : IProduct
     {
         // --- Properties: All must be public  private set; ---
-        public long ProductID { get; private set; }
-        public string ProductName { get; private set; }
-        public int Stock { get; private set; }
-        public string? Description { get; private set; }
-        public byte LanguageType { get; private set; }
-        public decimal Price { get; private set; }
-        public DateTime? CreateTime { get; private set; }
-        public DateTime? UpdateTime { get; private set; }
-        public bool IsActive { get; private set; }
-        public bool IsDeleted { get; private set; }
-        public bool IsMedia { get; private set; }
-        public bool IsTax { get; private set; }
-        public string? Comment { get; private set; }
-        public long? ProductCategoryID { get; private set; }
-        public string? Unit { get; private set; }
-        public decimal PurePrice { get; private set; }
-        public float? Tax { get; private set; }
-        public long StoreID { get; private set; }
-        public long StoreCategoryID { get; private set; }
-        public string? ProductSaleTag { get; private set; }
-        public long Creator { get; private set; }
-        public long Modifier { get; private set; }
-        public DateTime? ActiveTimeStart { get; private set; }
-        public DateTime? ActiveTimeEnd { get; private set; }
-        public int? Level { get; private set; }
-        public long? AllowList { get; private set; }
-        public long? BlockList { get; private set; }
-        public int Status { get; private set; }
+        public long ProductID { get; set; }
+        public string ProductName { get; set; }
+        public int Stock { get; set; }
+        public string? Description { get; set; }
+        public byte LanguageType { get; set; }
+        public decimal Price { get; set; }
+        public DateTime? CreateTime { get; set; }
+        public DateTime? UpdateTime { get; set; }
+        public bool IsActive { get; set; }
+        public bool IsDelete { get; set; }
+        public bool IsMedia { get; set; }
+        public bool IsTax { get; set; }
+        public string? Comment { get; set; }
+        public long? ProductCategoryID { get; set; }
+        public string? Unit { get; set; }
+        public decimal PurePrice { get; set; }
+        public float? Tax { get; set; }
+        public long StoreID { get; set; }
+        public long StoreCategoryID { get; set; }
+        public string? ProductSaleTag { get; set; }
+        public long Creator { get; set; }
+        public long Modifier { get; set; }
+        public DateTime? ActiveTimeStart { get; set; }
+        public DateTime? ActiveTimeEnd { get; set; }
+        public int? Level { get; set; }
+        public long? AllowList { get; set; }
+        public long? BlockList { get; set; }
+        public int Status { get; set; }
 
         // --- Private Constructor: Only the Builder can call this ---
         private Product(
@@ -52,7 +52,7 @@ namespace MasterAPITest.Models
             CreateTime = createTime;
             UpdateTime = updateTime;
             IsActive = isActive;
-            IsDeleted = isDeleted;
+            IsDelete = isDeleted;
             IsMedia = isMedia;
             IsTax = isTax;
             Comment = comment;

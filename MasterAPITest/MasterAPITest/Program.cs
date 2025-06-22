@@ -1,4 +1,6 @@
 ﻿using System.Data;
+using MasterAPITest.DataGenerator;
+using MasterAPITest.Repository;
 using Microsoft.Data.SqlClient;
 
 
@@ -16,6 +18,11 @@ builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
+
+builder.Services.AddScoped<ImplementTest>();
+builder.Services.AddScoped<ProductDAL>();
+
+
 
 var app = builder.Build();
 

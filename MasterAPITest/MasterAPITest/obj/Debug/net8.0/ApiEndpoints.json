@@ -40,6 +40,26 @@
     ]
   },
   {
+    "ContainingType": "MasterAPITest.Controllers.HomeController",
+    "Method": "TestProductImplement",
+    "RelativePath": "TestProductImplement",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.String",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
     "ContainingType": "MasterAPITest.Controllers.WeatherForecastController",
     "Method": "Get",
     "RelativePath": "WeatherForecast",

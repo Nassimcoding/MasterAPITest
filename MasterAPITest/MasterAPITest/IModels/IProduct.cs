@@ -4,50 +4,50 @@
     {
 
         // Primary Key
-        long ProductID { get; } // BIGINT NOT NULL PRIMARY KEY -- Snowflake generated
+        long ProductID { get; set; } // BIGINT NOT NULL PRIMARY KEY -- Snowflake generated
 
         // Core Product Information
-        string ProductName { get; } // NVARCHAR(200) NOT NULL
-        int Stock { get; } // INT NOT NULL
-        string? Description { get; } // NVARCHAR(MAX) NULL (nullable string)
-        byte LanguageType { get; } // TINYINT NOT NULL (e.g., 2 = en, 1 = tw, 3 = jp)
-        decimal Price { get; } // DECIMAL(12, 3) NOT NULL (using decimal for precision)
+        string ProductName { get; set; } // NVARCHAR(200) NOT NULL
+        int Stock { get; set; } // INT NOT NULL
+        string? Description { get; set; } // NVARCHAR(MAX) NULL (nullable string)
+        byte LanguageType { get; set; } // TINYINT NOT NULL (e.g., 2 = en, 1 = tw, 3 = jp)
+        decimal Price { get; set; } // DECIMAL(12, 3) NOT NULL (using decimal for precision)
 
         // Timestamps
-        DateTime? CreateTime { get; } // DATETIME NULL (nullable DateTime)
-        DateTime? UpdateTime { get; } // DATETIME NULL (nullable DateTime)
+        DateTime? CreateTime { get; set; } // DATETIME NULL (nullable DateTime)
+        DateTime? UpdateTime { get; set; } // DATETIME NULL (nullable DateTime)
 
         // Status Flags
-        bool IsActive { get; } // BIT NOT NULL DEFAULT 1 (true for active)
-        bool IsDeleted { get; } // BIT NOT NULL DEFAULT 0 (true for soft deleted)
-        bool IsMedia { get; } // BIT NOT NULL DEFAULT 0 (true if has product media data)
-        bool IsTax { get; } // BIT NOT NULL DEFAULT 0 (true if tax applies)
+        bool IsActive { get; set; } // BIT NOT NULL DEFAULT 1 (true for active)
+        bool IsDelete { get; set; } // BIT NOT NULL DEFAULT 0 (true for soft deleted)
+        bool IsMedia { get; set; } // BIT NOT NULL DEFAULT 0 (true if has product media data)
+        bool IsTax { get; set; } // BIT NOT NULL DEFAULT 0 (true if tax applies)
 
         // Additional Product Details
-        string? Comment { get; } // NVARCHAR(200) NULL (nullable string)
-        long? ProductCategoryID { get; } // BIGINT NULL (FK to Category ID table)
-        string? Unit { get; } // NVARCHAR(10) NULL (item measurement unit)
-        decimal PurePrice { get; } // DECIMAL(12, 3) NOT NULL (original price after tax removal)
-        float? Tax { get; } // FLOAT NULL (nullable float for tax rate)
+        string? Comment { get; set; } // NVARCHAR(200) NULL (nullable string)
+        long? ProductCategoryID { get; set; } // BIGINT NULL (FK to Category ID table)
+        string? Unit { get; set; } // NVARCHAR(10) NULL (item measurement unit)
+        decimal PurePrice { get; set; } // DECIMAL(12, 3) NOT NULL (original price after tax removal)
+        float? Tax { get; set; } // FLOAT NULL (nullable float for tax rate)
 
         // Store and Sales Information
-        long StoreID { get; } // BIGINT NOT NULL (which store the product belongs to)
-        long StoreCategoryID { get; } // BIGINT NOT NULL (product category within the store)
-        string? ProductSaleTag { get; } // NVARCHAR(MAX) NULL (e.g., #85折, #買一送一)
+        long StoreID { get; set; } // BIGINT NOT NULL (which store the product belongs to)
+        long StoreCategoryID { get; set; } // BIGINT NOT NULL (product category within the store)
+        string? ProductSaleTag { get; set; } // NVARCHAR(MAX) NULL (e.g., #85折, #買一送一)
 
         // Creators and Modifiers
-        long Creator { get; } // BIGINT NOT NULL
-        long Modifier { get; } // BIGINT NOT NULL
+        long Creator { get; set; } // BIGINT NOT NULL
+        long Modifier { get; set; } // BIGINT NOT NULL
 
         // Active Time Control
-        DateTime? ActiveTimeStart { get; } // DATETIME NULL (active from this time, overrides IsActive)
-        DateTime? ActiveTimeEnd { get; } // DATETIME NULL (active until this time, overrides IsActive)
+        DateTime? ActiveTimeStart { get; set; } // DATETIME NULL (active from this time, overrides IsActive)
+        DateTime? ActiveTimeEnd { get; set; } // DATETIME NULL (active until this time, overrides IsActive)
 
         // Access Control and Status
-        int? Level { get; } // INT NULL (null for anyone, or min level required)
-        long? AllowList { get; } // BIGINT NULL (FK to allowlist.allowlistid)
-        long? BlockList { get; } // BIGINT NULL (FK to blocklist.blockid)
-        int Status { get; } // INT NOT NULL (0=normal, 1=out of stock, 2=discontinued, etc.)
+        int? Level { get; set; } // INT NULL (null for anyone, or min level required)
+        long? AllowList { get; set; } // BIGINT NULL (FK to allowlist.allowlistid)
+        long? BlockList { get; set; } // BIGINT NULL (FK to blocklist.blockid)
+        int Status { get; set; } // INT NOT NULL (0=normal, 1=out of stock, 2=discontinued, etc.)
 
 
 
