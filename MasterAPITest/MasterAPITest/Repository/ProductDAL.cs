@@ -80,23 +80,17 @@ VALUES
     @BlockList,
     @Status
 );";
-            int ch = 0;
             try
             {
-                for (int i = 0; i < products.Count; i++)
-                {
-                    ch += await con.ExecuteAsync(sql, products[i]);
-                }
+                int ch = await con.ExecuteAsync(sql, products);
+                return ch == products.Count;
             }
             catch (Exception ex)
             {
-                Console.WriteLine("SQL Insert Error:");
-                Console.WriteLine(ex.GetType().FullName);
-                Console.WriteLine(ex.Message);
-                Console.WriteLine(ex.StackTrace);
+                Console.WriteLine("批次 Insert 發生錯誤");
+                Console.WriteLine(ex);
                 throw;
             }
-            return ch == products.Count;
 
         }
 
