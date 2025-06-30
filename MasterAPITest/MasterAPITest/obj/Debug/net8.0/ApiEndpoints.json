@@ -41,8 +41,74 @@
   },
   {
     "ContainingType": "MasterAPITest.Controllers.HomeController",
+    "Method": "TestProductGetALLImplement",
+    "RelativePath": "TestProductGetALLImplement",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.String",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "MasterAPITest.Controllers.HomeController",
     "Method": "TestProductImplement",
     "RelativePath": "TestProductImplement",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.String",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "MasterAPITest.Controllers.HomeController",
+    "Method": "TestProductSearchKeywordImplement_AnyKeyword",
+    "RelativePath": "TestProductSearchKeywordImplement_AnyKeyword",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "keyword",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.String",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "MasterAPITest.Controllers.HomeController",
+    "Method": "TestProductSearchKeywordImplement_NoSearchWord",
+    "RelativePath": "TestProductSearchKeywordImplement_NoSearchWord",
     "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,

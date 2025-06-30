@@ -5,7 +5,7 @@
         /// <summary>
         /// 產生下一個唯一 ID（long）
         /// </summary>
-        long CreateId();
+        long CreateId(ref long se);
 
 
     }

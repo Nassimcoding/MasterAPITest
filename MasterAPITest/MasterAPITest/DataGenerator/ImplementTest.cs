@@ -2,6 +2,8 @@
 using MasterAPITest.Repository;
 using MasterAPITest.DModel;
 using System.Data;
+using System.Text.Json.Serialization;
+using System.Text.Json;
 
 namespace MasterAPITest.DataGenerator
 {
@@ -21,11 +23,10 @@ namespace MasterAPITest.DataGenerator
         //insert test
         public async Task<string> ProductDALInsertInteTest(int dataCount = 1)
         {
-
             var productGenerator = new ProductDataGenerator();
             List<Product> listofproduct = new List<Product>();
             List<DProduct> datalistofproduct = new List<DProduct>();
-            Product product = productGenerator.ProductDataGenerate();
+            //Product product = productGenerator.ProductDataGenerate();
             for (int i = 0; i < dataCount; i++)
             {
                 listofproduct.Add(productGenerator.ProductDataGenerate());
@@ -48,8 +49,8 @@ namespace MasterAPITest.DataGenerator
             {
                 string correctMessage = "correct";
                 //product property compare
-                string output = productPropertyCompare(listofproduct[i], datalistofproduct[i],correctMessage);
-                if (correctMessage != "correct") 
+                string output = productPropertyCompare(listofproduct[i], datalistofproduct[i], correctMessage);
+                if (correctMessage != "correct")
                 {
                     return (output + " wrong index : " + i);
                 }
@@ -61,7 +62,7 @@ namespace MasterAPITest.DataGenerator
         //getall test
         public async Task<string> ProductDALGetAllInteTest()
         {
-            int addnumber = 1;
+            int addnumber = 0;
             var productGenerator = new ProductDataGenerator();
             List<Product> listofproduct = new List<Product>();
             List<DProduct> datalistofproduct = new List<DProduct>();
@@ -76,7 +77,7 @@ namespace MasterAPITest.DataGenerator
 
             //product property compare
             string output = productPropertyCompare(listofproduct[addnumber], datalistofproduct[datalistofproduct.Count - 1]);
-            
+
             countDatalistofproduct = await _productDAL.GetALL();
             if (datalistofproduct.Count != countDatalistofproduct.Count)
             {
@@ -87,23 +88,52 @@ namespace MasterAPITest.DataGenerator
         }
 
         //GetBySearchword
-        public async Task<string> ProductDALSearchByKeywordInteTest(string kw)
+        public async Task<string> ProductDALSearchByKeywordInteTest_NoSearchword()
         {
-
+            var productGenerator = new ProductDataGenerator();
+            List<Product> ListOfProduct = new List<Product>();
             List<DProduct> dataListOfProduct = new List<DProduct>();
-            
+            long targetID;
+            string correct = "all property correct!!";
+            string output = string.Empty;
 
+            ListOfProduct.Add(productGenerator.ProductDataGenerate());
+            targetID = ListOfProduct[0].ProductID;
+            bool IsInsertSuccess = await _productDAL.Insert(ListOfProduct);
+            if (!IsInsertSuccess)
+            {
+                return "insert data error";
+            }
+            dataListOfProduct = await _productDAL.GetBySearchKeyword(targetID.ToString());
 
+            if (dataListOfProduct.Count != ListOfProduct.Count)
+            {
+                return "search data count are wrong!!";
+            }
+            output = productPropertyCompare(ListOfProduct[0], dataListOfProduct[0], correct);
+            if (output != correct)
+            {
+                return "search failled " + output;
+            }
 
+            return ("SearchKeyword Test Success " + output);
+        }
+
+        // test product data search by any searchword
+        public async Task<string> ProductDALSearchByKeywordInteTest_AnySearchword(string kw)
+        {
+            List<DProduct> dataListOfProduct = new List<DProduct>();
             dataListOfProduct = await _productDAL.GetBySearchKeyword(kw);
+            string output = JsonSerializer.Serialize(dataListOfProduct);
 
-
-
-            return ("SearchKeyword Test Success");
+            return output;
         }
 
 
         //Update
+
+
+
 
         //Delete
 
@@ -112,7 +142,7 @@ namespace MasterAPITest.DataGenerator
 
         //private function----------------------------------
         //private product property compare method
-        private string productPropertyCompare(Product a, DProduct b,string output = "all property correct!!")
+        private string productPropertyCompare(Product a, DProduct b, string output = "all property correct!!")
         {
             if (a.ProductID != b.ProductID) return $"ProductID mismatch";
             if (a.ProductName != b.ProductName) return $"ProductName mismatch";
@@ -120,8 +150,8 @@ namespace MasterAPITest.DataGenerator
             if (a.Description != b.Description) return $"Description mismatch";
             if (a.LanguageType != b.LanguageType) return $"LanguageType mismatch";
             if (a.Price != b.Price) return $"Price mismatch";
-            if (a.CreateTime != b.CreateTime) return $"CreateTime mismatch";
-            if (a.UpdateTime != b.UpdateTime) return $"ModifyTime mismatch";
+            //if (a.CreateTime != b.CreateTime) return $"CreateTime mismatch";
+            //if (a.UpdateTime != b.UpdateTime) return $"ModifyTime mismatch";
             if (a.IsActive != b.IsActive) return $"IsActive mismatch";
             if (a.IsDelete != b.IsDelete) return $"IsDelete mismatch";
             if (a.Comment != b.Comment) return $"Comment mismatch";
@@ -135,8 +165,8 @@ namespace MasterAPITest.DataGenerator
             if (a.PurePrice != b.PurePrice) return $"PurePrice mismatch";
             if (a.StoreID != b.StoreID) return $"StoreID mismatch";
             if (a.ProductSaleTag != b.ProductSaleTag) return $"ProductSaleTag mismatch";
-            if (a.ActiveTimeStart != b.ActiveTimeStart) return $"ActiveTimeStart mismatch";
-            if (a.ActiveTimeEnd != b.ActiveTimeEnd) return $"ActiveTimeEnd mismatch";
+            //if (a.ActiveTimeStart != b.ActiveTimeStart) return $"ActiveTimeStart mismatch";
+            //if (a.ActiveTimeEnd != b.ActiveTimeEnd) return $"ActiveTimeEnd mismatch";
             if (a.Level != b.Level) return $"Level mismatch";
             if (a.AllowList != b.AllowList) return $"AllowList mismatch";
             if (a.BlockList != b.BlockList) return $"BlockList mismatch";

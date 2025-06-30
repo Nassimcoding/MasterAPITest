@@ -9,13 +9,16 @@ namespace MasterAPIUnitTest.MethodTest
     public class SnowFlakeIDGeneratorTest
     {
 
+
+
         [Fact]
         public void CreateId_ShouldReturnUniqueValues_WhenCalledConsecutively()
         {
             var gen = new SnowFlakeIDGenerator(machineId: 1);
+            long global = 0L;
 
-            long id1 = gen.CreateId();
-            long id2 = gen.CreateId();
+            long id1 = gen.CreateId(ref global);
+            long id2 = gen.CreateId(ref global);
 
             Assert.NotEqual(id1, id2);
         }
@@ -25,9 +28,10 @@ namespace MasterAPIUnitTest.MethodTest
         {
             var gen = new SnowFlakeIDGenerator(machineId: 1);
             var gen2 = new SnowFlakeIDGenerator(machineId: 2);
+            long global = 0L;
 
-            long id1 = gen.CreateId();
-            long id2 = gen2.CreateId();
+            long id1 = gen.CreateId(ref global);
+            long id2 = gen2.CreateId(ref global);
 
             Assert.NotEqual(id1, id2);
         }
@@ -54,9 +58,10 @@ namespace MasterAPIUnitTest.MethodTest
         public void CreateId_ShouldWaitNextMillis_WhenSequenceOverflows()
         {
             var gen = new SnowFlakeIDGenerator(machineId: 2);
+            long global = 0L;
 
             // 初始化一次
-            gen.CreateId();
+            gen.CreateId(ref global);
 
             // 把 _lastTimestamp 固定在同一毫秒，並把 _sequence 設為最大
             var tsField = typeof(SnowFlakeIDGenerator)
@@ -70,7 +75,7 @@ namespace MasterAPIUnitTest.MethodTest
             seqField.SetValue(gen, (long)((-1L ^ (-1L << 12))));
 
             // 下一個 ID 的 timestamp 部分至少要比 lastTs + 1 (毫秒) 大
-            long newId = gen.CreateId();
+            long newId = gen.CreateId(ref global);
             // 解碼 timestamp：((newId >> (SequenceBits + MachineIdBits)) + Twepoch)
             const int SequenceBits = 12, MachineIdBits = 9;
             const long Twepoch = 1577836800000L;

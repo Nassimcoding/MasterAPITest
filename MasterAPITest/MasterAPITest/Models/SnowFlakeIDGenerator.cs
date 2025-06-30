@@ -16,7 +16,7 @@ namespace MasterAPITest.Models
         private const int TimestampLeftShift = SequenceBits + MachineIdBits;
 
         private long _lastTimestamp = -1L;
-        private long _sequence = 0L;
+        //private long _sequence = 0L;
         private readonly long _machineId;
         private readonly object _lock = new object();
 
@@ -27,7 +27,7 @@ namespace MasterAPITest.Models
             _machineId = machineId;
         }
 
-        public long CreateId()
+        public long CreateId(ref long sequence)
         {
             lock (_lock)
             {
@@ -38,22 +38,22 @@ namespace MasterAPITest.Models
 
                 if (timestamp == _lastTimestamp)
                 {
-                    _sequence = (_sequence + 1) & MaxSequence;
-                    if (_sequence == 0)
+                    sequence = (sequence + 1) & MaxSequence;
+                    if (sequence == 0)
                     {
                         timestamp = WaitNextMillis(_lastTimestamp);
                     }
                 }
                 else
                 {
-                    _sequence = 0;
+                    sequence++;
                 }
 
                 _lastTimestamp = timestamp;
 
                 return ((timestamp - Twepoch) << TimestampLeftShift)
                        | (_machineId << MachineIdShift)
-                       | _sequence;
+                       | sequence;
             }
         }
         // check current timestamp is bigger then last timestamp

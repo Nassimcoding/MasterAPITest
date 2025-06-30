@@ -1,5 +1,7 @@
 ﻿using System.Data;
 using MasterAPITest.DataGenerator;
+using MasterAPITest.IModels;
+using MasterAPITest.Models;
 using MasterAPITest.Repository;
 using Microsoft.Data.SqlClient;
 
@@ -22,7 +24,7 @@ builder.Services.AddSwaggerGen();
 builder.Services.AddScoped<ImplementTest>();
 builder.Services.AddScoped<ProductDAL>();
 
-
+builder.Services.AddSingleton<GlobalState>();
 
 var app = builder.Build();
 

@@ -125,7 +125,7 @@ SELECT *
 FROM Product 
 WHERE 
 ProductName LIKE @skw1 
-OR Descroption LIKE @skw2
+OR Description LIKE @skw2
 OR Comment LIKE @skw3
 ";
             IEnumerable<DProduct> products = await con.QueryAsync<DProduct>(sql,

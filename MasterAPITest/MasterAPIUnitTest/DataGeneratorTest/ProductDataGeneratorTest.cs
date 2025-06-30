@@ -12,11 +12,11 @@ namespace MasterAPIUnitTest.DataGeneratorTest
 {
     public class ProductDataGeneratorTest
     {
-        private readonly ImplementTest _storePageDAL;
-        public ProductDataGeneratorTest(ImplementTest storePageDAL)
-        {
-            _storePageDAL = storePageDAL;
-        }
+        //private readonly ImplementTest _storePageDAL;
+        //public ProductDataGeneratorTest(ImplementTest storePageDAL)
+        //{
+        //    _storePageDAL = storePageDAL;
+        //}
 
 
         //private readonly IDbConnection con;
