@@ -182,7 +182,7 @@ WHERE ProductID = @ProductID;";
 UPDATE Product
 SET
 IsDelete = @IsDelete,
-IsActive = @IsActive, // Often also set to false when soft deleted
+IsActive = @IsActive, 
 UpdateTime = @UpdateTime,
 Modifier = @Modifier
 WHERE ProductID = @ProductID;";
@@ -190,7 +190,7 @@ WHERE ProductID = @ProductID;";
             var parameters = new
             {
                 ProductID = productID,
-                IsDeleted = true,
+                IsDelete = true,
                 IsActive = false,
                 UpdateTime = DateTime.Now,
                 Modifier = modifierID

@@ -41,6 +41,26 @@
   },
   {
     "ContainingType": "MasterAPITest.Controllers.HomeController",
+    "Method": "TestProductDeleteImplement",
+    "RelativePath": "TestProductDeleteImplement",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.String",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "MasterAPITest.Controllers.HomeController",
     "Method": "TestProductGetALLImplement",
     "RelativePath": "TestProductGetALLImplement",
     "HttpMethod": "POST",
@@ -113,6 +133,52 @@
     "IsController": true,
     "Order": 0,
     "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.String",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "MasterAPITest.Controllers.HomeController",
+    "Method": "TestProductUpdateImplement_1DataUpdateByAutoTest",
+    "RelativePath": "TestProductUpdateImplement_1DataUpdateByAutoTest",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.String",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "MasterAPITest.Controllers.HomeController",
+    "Method": "TestProductUpdateImplement_1DataUpdateByKeyword",
+    "RelativePath": "TestProductUpdateImplement_1DataUpdateByKeyword",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "kw",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
     "ReturnTypes": [
       {
         "Type": "System.String",

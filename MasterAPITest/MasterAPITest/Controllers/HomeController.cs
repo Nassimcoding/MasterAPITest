@@ -34,8 +34,6 @@ namespace MasterAPITest.Controllers
         public string HomeTestAPI2()
         {
 
-
-
             return "success";
         }
 
@@ -81,6 +79,30 @@ namespace MasterAPITest.Controllers
         public async Task<string> TestProductSearchKeywordImplement_AnyKeyword(string keyword)
         {
             string s1 = await _implementTest.ProductDALSearchByKeywordInteTest_AnySearchword(keyword);
+
+            return s1;
+        }
+
+        [HttpPost("TestProductUpdateImplement_1DataUpdateByAutoTest")]
+        public async Task<string> TestProductUpdateImplement_1DataUpdateByAutoTest()
+        {
+            string s1 = await _implementTest.ProductDALUpdateTest_1DataUpdateByAutoTest();
+
+            return s1;
+        }
+
+        [HttpPost("TestProductUpdateImplement_1DataUpdateByKeyword")]
+        public async Task<string> TestProductUpdateImplement_1DataUpdateByKeyword(string kw)
+        {
+            string s1 = await _implementTest.ProductDALUpdateTest_1DataUpdateByKeyword(kw);
+
+            return s1;
+        }
+
+        [HttpPost("TestProductDeleteImplement")]
+        public async Task<string> TestProductDeleteImplement()
+        {
+            string s1 = await _implementTest.ProductDALDeleteTest();
 
             return s1;
         }
