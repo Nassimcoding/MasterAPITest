@@ -55,7 +55,7 @@ namespace MasterAPITest.DataGenerator
                 .LanguageType(languageType)
                 .Price(productPrice)
                 .CreateTime(systemTimeNow)
-                .UpdateTime(systemTimeNow)
+                .ModifyTime(systemTimeNow)
                 .IsActive(isActive)
                 .IsDeleted(isDeleted)
                 .Comment(comment)

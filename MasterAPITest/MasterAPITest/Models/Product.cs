@@ -12,7 +12,7 @@ namespace MasterAPITest.Models
         public byte LanguageType { get; set; }
         public decimal Price { get; set; }
         public DateTime? CreateTime { get; set; }
-        public DateTime? UpdateTime { get; set; }
+        public DateTime? ModifyTime { get; set; }
         public bool IsActive { get; set; }
         public bool IsDelete { get; set; }
         public bool IsMedia { get; set; }
@@ -37,7 +37,7 @@ namespace MasterAPITest.Models
         // --- Private Constructor: Only the Builder can call this ---
         private Product(
             long productID, string productName, int stock, string? description, byte languageType, decimal price,
-            DateTime? createTime, DateTime? updateTime, bool isActive, bool isDeleted, bool isMedia, bool isTax,
+            DateTime? createTime, DateTime? modifyTime, bool isActive, bool isDeleted, bool isMedia, bool isTax,
             string? comment, long? productCategoryID, string? unit, decimal purePrice, float? tax,
             long storeID, long storeCategoryID, string? productSaleTag, long creator, long modifier,
             DateTime? activeTimeStart, DateTime? activeTimeEnd, int? level, long? allowList, long? blockList,
@@ -50,7 +50,7 @@ namespace MasterAPITest.Models
             LanguageType = languageType;
             Price = price;
             CreateTime = createTime;
-            UpdateTime = updateTime;
+            ModifyTime = modifyTime;
             IsActive = isActive;
             IsDelete = isDeleted;
             IsMedia = isMedia;
@@ -84,7 +84,7 @@ namespace MasterAPITest.Models
             private byte _languageType;
             private decimal _price;
             private DateTime? _createTime;
-            private DateTime? _updateTime;
+            private DateTime? _modifyTime;
             private bool _isActive;
             private bool _isDeleted;
             private bool _isMedia;
@@ -134,7 +134,7 @@ namespace MasterAPITest.Models
             public Builder LanguageType(byte languageType) { _languageType = languageType; return this; }
             public Builder Price(decimal price) { _price = price; return this; }
             public Builder CreateTime(DateTime? createTime) { _createTime = createTime; return this; }
-            public Builder UpdateTime(DateTime? updateTime) { _updateTime = updateTime; return this; }
+            public Builder ModifyTime(DateTime? modifyTime) { _modifyTime = modifyTime; return this; }
             public Builder IsActive(bool isActive) { _isActive = isActive; return this; }
             public Builder IsDeleted(bool isDeleted) { _isDeleted = isDeleted; return this; }
             public Builder IsMedia(bool isMedia) { _isMedia = isMedia; return this; }
@@ -204,7 +204,7 @@ namespace MasterAPITest.Models
 
                 return new Product(
                     _productID, _productName, _stock, _description, _languageType, _price,
-                    _createTime, _updateTime, _isActive, _isDeleted, _isMedia, _isTax,
+                    _createTime, _modifyTime, _isActive, _isDeleted, _isMedia, _isTax,
                     _comment, _productCategoryID, _unit, _purePrice, _tax,
                     _storeID, _storeCategoryID, _productSaleTag, _creator, _modifier,
                     _activeTimeStart, _activeTimeEnd, _level, _allowList, _blockList,

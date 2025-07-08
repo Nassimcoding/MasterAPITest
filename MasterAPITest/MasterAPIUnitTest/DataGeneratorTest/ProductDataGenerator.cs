@@ -22,7 +22,7 @@ namespace MasterAPIUnitTest.DataGenerator
 
             // Assert
             Assert.NotNull(resultProduct); // 確保 Product 物件不為 null
-            Assert.Equal(resultProduct.CreateTime, resultProduct.UpdateTime); // 使用 decimal 字面量 'm'
+            Assert.Equal(resultProduct.CreateTime, resultProduct.ModifyTime); // 使用 decimal 字面量 'm'
             Assert.NotEqual(resultProduct.ProductID, resultProduct.ProductCategoryID);
             Assert.NotEqual(resultProduct.StoreID, resultProduct.StoreCategoryID);
         }

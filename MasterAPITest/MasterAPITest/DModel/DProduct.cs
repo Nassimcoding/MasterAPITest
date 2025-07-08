@@ -12,7 +12,7 @@ namespace MasterAPITest.DModel
         public byte LanguageType { get; set; }
         public decimal Price { get; set; }
         public DateTime? CreateTime { get; set; }
-        public DateTime? UpdateTime { get; set; }
+        public DateTime? ModifyTime { get; set; }
         public bool IsActive { get; set; }
         public bool IsDelete { get; set; }
         public bool IsMedia { get; set; }

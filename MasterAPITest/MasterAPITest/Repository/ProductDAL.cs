@@ -27,7 +27,7 @@ INSERT INTO Product
     LanguageType,
     Price,
     CreateTime,
-    UpdateTime,
+    ModifyTime,
     IsActive,
     IsDelete,
     IsMedia,
@@ -58,7 +58,7 @@ VALUES
     @LanguageType,
     @Price,
     @CreateTime,
-    @UpdateTime,
+    @ModifyTime,
     @IsActive,
     @IsDelete,
     @IsMedia,
@@ -149,7 +149,7 @@ SET
     Description = @Description,
     LanguageType = @LanguageType,
     Price = @Price,
-    UpdateTime = @UpdateTime,      
+    ModifyTime = @ModifyTime,      
     IsActive = @IsActive,
     IsDelete = @IsDelete,
     IsMedia = @IsMedia,
@@ -169,7 +169,7 @@ SET
     Status = @Status
 WHERE ProductID = @ProductID;";
 
-            //product.UpdateTime; DateTime.Now);
+            //product.ModifyTime; DateTime.Now);
             //product.Modifier = modifierId;
 
             int rowsAffected = await con.ExecuteAsync(sql, product);
@@ -183,7 +183,7 @@ UPDATE Product
 SET
 IsDelete = @IsDelete,
 IsActive = @IsActive, 
-UpdateTime = @UpdateTime,
+ModifyTime = @ModifyTime,
 Modifier = @Modifier
 WHERE ProductID = @ProductID;";
 
@@ -192,7 +192,7 @@ WHERE ProductID = @ProductID;";
                 ProductID = productID,
                 IsDelete = true,
                 IsActive = false,
-                UpdateTime = DateTime.Now,
+                ModifyTime = DateTime.Now,
                 Modifier = modifierID
             };
 

@@ -165,7 +165,7 @@ namespace MasterAPITest.DataGenerator
             ListOfProduct[0].Stock = cproduct.Stock;
             ListOfProduct[0].Description = cproduct.Description;
             ListOfProduct[0].Price = cproduct.Price;
-            ListOfProduct[0].UpdateTime = cproduct.UpdateTime;
+            ListOfProduct[0].ModifyTime = cproduct.ModifyTime;
             ListOfProduct[0].Comment = cproduct.Comment;
             ListOfProduct[0].StoreID = cproduct.StoreID;
             ListOfProduct[0].StoreCategoryID = cproduct.StoreCategoryID;
@@ -191,7 +191,7 @@ namespace MasterAPITest.DataGenerator
             ListOfProduct[0].Stock = cproduct.Stock;
             ListOfProduct[0].Description = cproduct.Description;
             ListOfProduct[0].Price = cproduct.Price;
-            ListOfProduct[0].UpdateTime = cproduct.UpdateTime;
+            ListOfProduct[0].ModifyTime = cproduct.ModifyTime;
             ListOfProduct[0].Comment = cproduct.Comment;
             ListOfProduct[0].StoreCategoryID = cproduct.StoreCategoryID;
             ListOfProduct[0].Modifier = cproduct.Modifier;
@@ -246,7 +246,7 @@ namespace MasterAPITest.DataGenerator
             ListOfProduct[0].Stock = cproduct.Stock;
             ListOfProduct[0].Description = kw; // change by kw
             ListOfProduct[0].Price = cproduct.Price;
-            ListOfProduct[0].UpdateTime = cproduct.UpdateTime;
+            ListOfProduct[0].ModifyTime = cproduct.ModifyTime;
             ListOfProduct[0].Comment = cproduct.Comment;
             ListOfProduct[0].StoreID = cproduct.StoreID;
             ListOfProduct[0].StoreCategoryID = cproduct.StoreCategoryID;
@@ -277,7 +277,8 @@ namespace MasterAPITest.DataGenerator
             {
                 return "step 4 Final update data failled";
             }
-            output = allVertifyClear + JsonSerializer.Serialize(dataListOfProduct[2].Description);
+            output = allVertifyClear + " ID : " + JsonSerializer.Serialize(dataListOfProduct[2].ProductID)
+            + " Description : " + JsonSerializer.Serialize(dataListOfProduct[2].Description);
             return output;
         }
 
@@ -322,9 +323,9 @@ namespace MasterAPITest.DataGenerator
             if (a.LanguageType != b.LanguageType) return $"LanguageType mismatch";
             if (a.Price != b.Price) return $"Price mismatch";
             //if (!Nullable.Equals(a.CreateTime, b.CreateTime)) return "CreateTime mismatch";
-            //if (!Nullable.Equals(a.UpdateTime, b.UpdateTime)) return "UpdateTime mismatch";
+            //if (!Nullable.Equals(a.ModifyTime, b.ModifyTime)) return "ModifyTime mismatch";
             //if (a.CreateTime != b.CreateTime) return $"CreateTime mismatch";
-            //if (a.UpdateTime != b.UpdateTime) return $"ModifyTime mismatch";
+            //if (a.ModifyTime != b.ModifyTime) return $"ModifyTime mismatch";
             if (a.IsActive != b.IsActive) return $"IsActive mismatch";
             if (a.IsDelete != b.IsDelete) return $"IsDelete mismatch";
             if (a.Comment != b.Comment) return $"Comment mismatch";
@@ -356,7 +357,7 @@ namespace MasterAPITest.DataGenerator
             if (a.Description != b.Description) return $"error Description kw notchanged!!";
             if (a.LanguageType != b.LanguageType) return $"LanguageType mismatch";
             //if (a.CreateTime != b.CreateTime) return $"CreateTime mismatch";
-            //if (a.UpdateTime != b.UpdateTime) return $"ModifyTime mismatch";
+            //if (a.ModifyTime != b.ModifyTime) return $"ModifyTime mismatch";
             if (a.Comment != b.Comment) return $"error Comment notchanged";
             if (a.ProductCategoryID != b.ProductCategoryID) return $"error ProductCategoryID notchanged";
             if (a.Creator != b.Creator) return $"Creator mismatch";

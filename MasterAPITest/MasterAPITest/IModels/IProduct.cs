@@ -15,7 +15,7 @@
 
         // Timestamps
         DateTime? CreateTime { get; set; } // DATETIME NULL (nullable DateTime)
-        DateTime? UpdateTime { get; set; } // DATETIME NULL (nullable DateTime)
+        DateTime? ModifyTime { get; set; } // DATETIME NULL (nullable DateTime)
 
         // Status Flags
         bool IsActive { get; set; } // BIT NOT NULL DEFAULT 1 (true for active)
